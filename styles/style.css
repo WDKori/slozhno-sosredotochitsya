@@ -74,7 +74,7 @@
 }
 
 .header__theme-menu-item {
-  margin: 10px 0;
+  margin: 12px 0;
 }
 
 .header__theme-menu-button {
@@ -117,22 +117,23 @@
 }
 .title__decor {
   font-size: var(--main-fontsize);
-  font-family: var(--main-font);
+  font-family: var(--main-font), monospace;
   font-weight: var(--weight-bold);
   background-color: var(--accent-color);
   color: var(--decor-color);
 }
 .content {
   padding: var(--main-padding);
-  margin: 30px 0;
+  margin: 30px 0 35px;
 }
 .content__section-title {
   color: var(--accent-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font), monospace;
   font-weight: var(--weight-bold);
   font-size: var(--main-fontsize);
   text-wrap: wrap;
   line-height: 23.4px;
+
   margin-bottom: 20px;
 }
 
@@ -147,7 +148,7 @@
 
 .card__content {
   margin-top: 10px;
-  font-family: var(--main-font);
+  font-family: var(--main-font), monospace;
   font-size: var(--main-fontsize);
   font-weight: var(--weight-regular);
   color: var(--main-color);
@@ -169,16 +170,17 @@
 }
 
 .card__subtitle-title {
-  font-family: var(--main-font);
+  font-family: var(--main-font), monospace;
   font-weight: var(--weight-regular);
   color: var(--decor-color);
   background-color: var(--accent-color);
+  line-height: 23.4px;
 }
 
 .gallery__card-list-item {
   padding: 0;
   margin: 0;
-  margin-bottom: 10px;
+  margin-top: 10px;
   list-style: none;
 }
 .gallery__photo {
@@ -186,12 +188,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.gallery__card-list-title {
-  grid-area: title;
-  width: 100%;
-  text-align: start;
 }
 
 .sunset {
@@ -216,7 +212,7 @@
   position: relative;
   display: grid;
   height: 100vh;
-  min-height: 668px;
+  min-height: 667px;
 }
 
 .footer__title {
@@ -232,13 +228,6 @@
 }
 
 @media (width >= 768px) {
-  :root {
-    --main-padding: 20px;
-  }
-  .header {
-    max-height: 1024px;
-  }
-
   .header__decor {
     right: 48px;
   }
@@ -265,12 +254,15 @@
     gap: 20px;
   }
 
-  .margin-0 {
-    margin: 0;
-  }
-
   .content__section:not(:first-child) {
     margin-top: 80px;
+  }
+  .content__section-subtitle {
+    margin-bottom: 20px;
+  }
+
+  .card__list-item:first-child {
+    margin: 0;
   }
 
   .content__section-special {
@@ -288,9 +280,8 @@
   .gallery__card-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
     grid-template-areas:
-      'title title title'
       'sunset sunset ice-cream'
       'tape books ice-cream'
       'tape street street';
@@ -302,18 +293,11 @@
     padding: 0;
   }
 
-  .footer {
-    max-height: 1024px;
-  }
-
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 @media (width >= 1024px) {
-  .header {
-    max-height: 768px;
-  }
   .header__theme-menu {
     display: flex;
 
@@ -330,16 +314,27 @@
     margin: 0;
   }
 
+  .header__paragraph {
+    margin-top: 15px;
+    max-width: 50%;
+    justify-self: end;
+  }
+  .content__section:not(.gallery, .content__section-special) {
+    display: grid;
+    grid-template-columns: 1fr minmax(649px, 2fr);
+    gap: 20px;
+  }
   .content__section-title-special {
-    margin-bottom: 0;
+    margin-bottom: 20px;
+  }
+
+  .card__list-special .card__list-item {
+    margin: 0;
   }
 
   .card__list-special {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-  }
-  .footer {
-    max-height: 768px;
   }
 }

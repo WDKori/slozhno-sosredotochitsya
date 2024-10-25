@@ -13,6 +13,7 @@
   --title-color: #ffc2e6;
   --accent-color: #ff8dcb;
   --main-color: #353430;
+  --decor-color: #353430;
   --hover-color: rgba(50, 49, 45, 0.4);
   --background-image: url(../images/cover-image-light.png);
 
@@ -50,6 +51,10 @@
 
   .content__section-title {
     color: var(--main-color);
+  }
+
+  .footer__title {
+    text-shadow: 2px 2px 0 #ff0070;
   }
 }
 @media (prefers-color-scheme: light) {

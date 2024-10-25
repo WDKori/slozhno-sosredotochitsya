@@ -16,3 +16,9 @@
   --main-padding: 10px;
   --hover-color: rgba(255, 0, 112, 0.4);
 }
+
+@media (width >= 768px) {
+  :root {
+    --main-padding: 20px;
+  }
+}
