@@ -13,6 +13,7 @@
   --title-color: #ffc2e6;
   --accent-color: #ff8dcb;
   --main-color: #353430;
+  --hover-color: rgba(50, 49, 45, 0.4);
   --background-image: url(../images/cover-image-light.png);
 
   .header__decor {
@@ -37,7 +38,7 @@
   }
 
   .header__theme-menu-button:hover {
-    outline: 1px solid var(--main-color);
+    outline: 1px solid var(--hover-color);
   }
   .header__theme-menu-button:focus-visible {
     border-bottom: 1px solid var(--main-color);
@@ -56,6 +57,7 @@
     --title-color: #ffc2e6;
     --accent-color: #ff8dcb;
     --main-color: #353430;
+    --hover-color: rgba(50, 49, 45, 0.4);
     --background-image: url(../images/cover-image-light.png);
   }
 
@@ -81,7 +83,7 @@
   }
 
   .header__theme-menu-button:hover {
-    outline: 1px solid var(--main-color);
+    outline: 1px solid var(--hover-color);
   }
   .header__theme-menu-button:focus-visible {
     border-bottom: 1px solid var(--main-color);
