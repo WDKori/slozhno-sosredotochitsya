@@ -156,13 +156,14 @@
 }
 
 .card__content-link {
+  position: relative;
   text-decoration: none;
   text-shadow: 1px 1px 0 var(--accent-color);
 }
 
 .card__content-link:hover {
   outline: none;
-  bottom: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
 }
 
 .card__content-link:focus-visible {

@@ -45,16 +45,18 @@
     border-bottom: 1px solid var(--main-color);
   }
 
-  .header__title {
-    text-shadow: 4px 4px 0 #ff0070;
-  }
-
   .content__section-title {
     color: var(--main-color);
   }
 
-  .footer__title {
-    text-shadow: 2px 2px 0 #ff0070;
+  @media (width >= 1024px) {
+    .header__title {
+      text-shadow: 4px 4px 0 #ff0070;
+    }
+
+    .footer__title {
+      text-shadow: 2px 2px 0 #ff0070;
+    }
   }
 }
 @media (prefers-color-scheme: light) {
